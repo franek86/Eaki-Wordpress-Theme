@@ -1,0 +1,69 @@
+#home
+  background-color: white
+
+  .slide-section
+
+  .feautured-projects
+    text-align: center
+    background:
+      color: white
+    padding-bottom: 100px
+
+    .overlay-btn
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      overflow: hidden
+      background:
+        color: transparentize(#92d2b0, 0.35)
+      transform: scale(0)
+      transition: all .5s linear
+
+      .btn-click
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        width: 120px
+        padding: 10px 0
+        border: 1px solid white
+        background:
+          color: transparent
+        font:
+          size: 1.2em
+          weight: 600
+        text-transform: uppercase
+        display: block
+        color: white
+        cursor: pointer
+
+        span
+          height: 100%
+          display: block
+          float: right
+          width: 40px
+          border-left: 1px solid white
+          img
+            width: 60%
+
+    .feautured-projects-img
+      position: relative
+      height: 320px
+
+      &:hover .overlay-btn
+        transform: scale(1)
+
+      .responsive-img
+        width: 100%
+        height: 100%
+        img
+          width: 100%
+          height: 100%
+
+@media only screen and (min-width: $breakpoint-large)
+  #home
+    .feautured-projects
+      .feautured-projects-img
+        height: 500px

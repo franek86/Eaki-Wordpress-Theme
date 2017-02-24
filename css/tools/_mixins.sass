@@ -1,0 +1,4 @@
+@mixin transition
+  @for $i from 1 through 20
+    &:nth-child(#{$i}) .tapes-nav-bg-lines-color
+      transition: all .5s ease-in-out #{$i * .025}s

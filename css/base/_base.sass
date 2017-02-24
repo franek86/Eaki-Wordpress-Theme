@@ -1,0 +1,117 @@
+*
+  box-sizing: border-box
+
+body
+
+  #page
+    background: white
+    color: black
+
+  .pd10
+    padding-bottom: 0em
+
+  .wrapper-page
+    transition: all .2s linear
+
+  // section
+  //   margin-bottom: 80px
+
+  .clearfix:after
+     visibility: hidden
+     display: block
+     font-size: 0
+     content: " "
+     clear: both
+     height: 0
+
+  .clearfix
+    display: inline-block
+
+  * html .clearfix
+      height: 1%
+  .clearfix
+    display: block
+
+  #mobile-nav-full
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    text-align: center
+
+
+    .tapes-nav-bg
+      width: 100%
+      height: 100%
+      position: absolute
+      white-space: nowrap
+
+      .tapes-nav-bg-lines-top
+        top: 0%
+        @include transition
+
+      .tapes-nav-bg-lines-bottom
+        bottom: 0
+        @include transition
+
+      .tapes-nav-bg-lines
+        position: relative
+        display: inline-block
+        height: 100%
+        width: 5%
+
+        .tapes-nav-bg-lines-color
+          width: 100%
+          height: 0%
+          position: absolute
+          background:
+            color: #F588C6
+            image: radial-gradient(#fff, #92d2b0)
+
+          &.open-menu
+            height: 100%
+
+    .mobile-nav-items
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      opacity: 0
+      transition: all .2s ease
+
+      a
+        font:
+          size: 1.5em
+          weight: 600
+        text-transform: uppercase
+        color: #000
+        transition: all .2s linear
+
+        &:hover
+          color: #000
+
+  .inner-section
+    width: 100%
+    height: 20em
+    margin-bottom: 5em
+    text-align: center
+    background:
+      color: #92d2b0
+    h1
+      position: absolute
+      top: 25%
+      left: 50%
+      transform: translate(-50%, 0%)
+      color: white
+
+
+@media only screen and (min-width: $breakpoint-med)
+  #mobile-nav-full
+    display: none
+
+  .inner-section
+    height: 30em
+
+  .pd10
+    padding-bottom: 10em
